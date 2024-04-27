@@ -13,8 +13,6 @@ module Board
 
     config.assets.enabled = true
 
-    config.action_controller.raise_on_missing_callback_actions = false
-
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
 
