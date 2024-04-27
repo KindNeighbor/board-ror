@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style>
+    /* Email styles need to be inline */
+  </style>
+</head>
+
+<body>
+  <h1>Test 입니다.</h1>
+  <div>
+    <%= @temp %>
+  </div>
+  <% if @condition%>
+    <p>주어진 조건이 참입니다.</p>
+  <% else %>
+    <p>주어진 조건이 거짓입니다.</p>
+  <% end %>
+</body>
+</html>

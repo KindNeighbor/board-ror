@@ -2,12 +2,25 @@ require_relative "boot"
 
 require "rails/all"
 
+require "sprockets/railtie"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Board
   class Application < Rails::Application
+
+    config.assets.enabled = true
+
+    config.action_controller.raise_on_missing_callback_actions = false
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+
+    # rails_db 를 위한 설정
+    config.middleware.use ActionDispatch::Flash
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
