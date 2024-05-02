@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
 
-  root :to => "home#index"
-  post '/create' => 'home#create'
-  get "/update/:postId" => 'home#update'
-  post '/updateAction' => 'home#updateAction'
-  get "/delete/:postId" => 'home#delete'
+  resources :rb_boards
 
   get '/main' => 'calculator#main'
-  get "/home" => "home#index"
-  get "/test" => "home#test"
   post "/result" => "calculator#result"
   get "/plus/:num1/:num2" => "calculator#plus"
 

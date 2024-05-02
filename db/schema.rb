@@ -10,23 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_27_113406) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema[7.1].define(version: 2024_05_02_123907) do
 
-  create_table "im_table", id: false, force: :cascade do |t|
-    t.string "id", limit: 32
-  end
-
-  create_table "posts", force: :cascade do |t|
+  create_table "rb_boards", force: :cascade do |t|
     t.string "title"
-    t.text "description"
+    t.text "content"
+    t.string "writer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "test1", id: false, force: :cascade do |t|
-    t.string "id", limit: 32
   end
 
 end
