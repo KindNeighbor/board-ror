@@ -1,0 +1,2 @@
+class RbBoard < ApplicationRecord
+end
